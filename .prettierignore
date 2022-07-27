@@ -1,7 +1,7 @@
 # Ignore artifacts:
 .yarn
 yarn.lock
-build
+lib/
 node_modules
 .husky
 .editorconfig
