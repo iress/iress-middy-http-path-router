@@ -1,0 +1,13 @@
+# Ignore artifacts:
+.yarn
+yarn.lock
+build
+node_modules
+.husky
+.editorconfig
+.eslintignore
+.prettierignore
+.gitignore
+.github/CODEOWNERS
+*.svg
+*.zip

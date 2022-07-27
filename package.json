@@ -1,0 +1,112 @@
+{
+  "name": "@iress/middy-http-path-router",
+  "version": "0.1.0",
+  "description": "Routing middleware for Middy that provides path parameters in the event.",
+  "packageManager": "yarn@3.2.1",
+  "engines": {
+    "node": ">=14"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iress/iress-middy-http-path-router"
+  },
+  "author": {
+    "name": "Rodney Marsh",
+    "url": "https://github.com/iress"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "clean": "rimraf build",
+    "lint": "eslint \"**/*.ts\"",
+    "format": "yarn run lint --fix",
+    "test": "jest",
+    "prepack": "yarn clean && yarn build",
+    "postinstall": "husky install"
+  },
+  "peerDependencies": {
+    "@middy/core": ">=3.0.0",
+    "@types/aws-lambda": "^8.10.101"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@middy/core": "^3.1.0",
+    "@tophat/conventional-changelog-config": "^0.6.2",
+    "@types/aws-lambda": "^8.10.101",
+    "@types/eslint": "^8.4.5",
+    "@types/http-errors": "^1.8.2",
+    "@types/jest": "^28.1.4",
+    "@types/prettier": "^2.6.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "jest": "^28.1.2",
+    "lint-staged": "^13.0.3",
+    "monodeploy": "^3.1.0",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "http-errors": "^2.0.0",
+    "route-recognizer": "^0.3.4"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es2020": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ]
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "clearMocks": true,
+    "roots": [
+      "./src",
+      "./tests"
+    ],
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ]
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 2
+  }
+}
