@@ -1,3 +1,7 @@
+## 0.2.0
+### Features
+ * Update all dependencies
+
 ## 0.1.1
 ### Bugfixes:
  * Remove husky from postinstall preventing errors when installed from npm
