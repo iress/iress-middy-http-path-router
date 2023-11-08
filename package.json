@@ -1,6 +1,6 @@
 {
   "name": "@iress/middy-http-path-router",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Routing middleware for Middy that provides path parameters in the event.",
   "packageManager": "yarn@3.2.1",
   "engines": {
