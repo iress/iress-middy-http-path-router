@@ -32,3 +32,10 @@ const handler = middy()
 ## More about routing
 The responsibility for recognising routes and parameters is handled by 
 [route-recognizer](https://github.com/tildeio/route-recognizer).
+
+## Contributing
+ 1. Fork the repo
+ 2. Make the changes
+ 3. Run the tests
+ 4. Commit and push your changes
+ 5. Send a pull request
